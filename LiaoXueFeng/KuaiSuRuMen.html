@@ -1,0 +1,81 @@
+1、快速入门
+JavaScript代码可以直接嵌套在网页任何地方，通常放在<head>中
+<html>
+	<head>
+		<script>
+			alert('Hello,world');
+		</script>
+	</head>
+</html>
+//或者将JavaScript放到一个单独的.js文件中，然后在html中通过<script src="..."></script>引入这个文件;
+<html>
+	<head>
+		<script src="/static/js/abc.js"></script>
+	</head>
+</html>
+
+1.1基本语法
+//这是jsp的行注释
+/*这是
+块注释*/
+
+1.2 数据类型
+1.2.1 number
+	jsp不区分整数和浮点数，统一用number表示，number可做四则运算；
+	123; // 整数123
+	0.456; // 浮点数0.456
+	1.2345e3; // 科学计数法表示1.2345x1000，等同于1234.5
+		-99; // 负数
+	NaN; // NaN表示Not a Number，当无法计算结果时用NaN表示
+	Infinity; // Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity
+	字符串
+	'abc'或者"abc"
+1.2.2 布尔值
+	true / false
+1.2.3 比较运算符
+	“==”：会自动转换数据类型再比较；
+	“===”：不会自动转换数据类型，若类型不一致，则得false。
+1.2.4 null
+	空
+1.2.5 undefined
+	未定义
+1.2.6 数组
+	new Array(1,2,3);//创建数组[1,2,3];
+	var arr=[1,2,3.14,'hello'];
+	arr[6]; // 索引超出了范围，返回undefined；
+1.2.7 对象
+	jsp的对象是一组由键-值组成的无序集合；
+	var person={
+	name:'Bob',
+	age:20,
+	tags:['js','web','mobile'],
+	city:'Beijing'
+	};
+	person.name;//'Bob'
+1.2.8 变量
+	var a; // 申明了变量a，此时a的值为undefined
+	var $b = 1; // 申明了变量$b，同时给$b赋值，此时$b的值为1
+	同一个变量可反复赋值，且可以是不同类型。但只能用var申明一次；（var申明的变量时局部变量）
+	这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。
+1.3 字符串
+1.3.1 多行字符串
+  由于多行字符串用\n写起来比较费事，所以最新的ES6标准新增了一种多行字符串的表示方法，用反引号 ` ... ` 表示：
+	 `这是一个
+	多行
+	字符串`;
+1.3.2 模板字符串
+	var name = '小明';
+	var age = 20;
+	var message = '你好, ' + name + ', 你今年' + age + '岁了!';
+	var message = `你好, ${name}, 你今年${age}岁了!`;//效果和+连接相同
+	alert(message);
+1.3.3 字符串常见操作
+	length:长度
+	toUpperCase:把字符串全部变为大写
+	toLowerCase:把字符串全部变为小写
+	indexOf('a'):搜索指定字符串a出现的位置
+	substring(1,3):返回指定索引区间1-3的子串
+
+
+
+
